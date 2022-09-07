@@ -13,10 +13,8 @@ function App() {
   * code here
   */
 
-//  const [error, setError] = useState(null)
-
-  const validateEmail = (e) => {
-    const [error, setError] = useState(null)
+  const [error, setError] = useState(null)
+  const validateEmail = (e) => {   
     const email = e.target.value
     if(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
       setError(null)
@@ -43,7 +41,7 @@ function App() {
         <button id='submit' type="submit">Submit</button>
       </form>
       {
-        data.fname != undefined && (
+        data.fname !== undefined && (
           <div>
           <h1>{data.fname}</h1>
           <h2>{data.lname}</h2>
